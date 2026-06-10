@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Participant {
+  id        String   @id @default(uuid())
+  fullName  String
+  studentId String
+  email     String
+  createdAt DateTime @default(now())
+  results   Result[]
+}
+
+model Result {
+  id                     String      @id @default(uuid())
+  participantId          String
+  participant            Participant @relation(fields: [participantId], references: [id])
+  answersJson            String
+  teaScoresJson          String
+  baseScoresJson         String
+  scentIdentity          String
+  personalityDescription String
+  scentDescription       String
+  formulaJson            String
+  createdAt              DateTime    @default(now())
+}
