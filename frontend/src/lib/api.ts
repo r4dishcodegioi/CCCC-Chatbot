@@ -1,4 +1,4 @@
-const API_BASE = '';
+const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL || process.env.BACKEND_URL || '';
 
 export async function registerParticipant(data: {
   fullName: string;

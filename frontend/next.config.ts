@@ -1,23 +1,25 @@
 import type { NextConfig } from "next";
 
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+
 const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
         source: '/participants/:path*',
-        destination: 'http://localhost:3001/participants/:path*',
+        destination: `${BACKEND_URL}/participants/:path*`,
       },
       {
         source: '/questions/:path*',
-        destination: 'http://localhost:3001/questions/:path*',
+        destination: `${BACKEND_URL}/questions/:path*`,
       },
       {
         source: '/quiz/:path*',
-        destination: 'http://localhost:3001/quiz/:path*',
+        destination: `${BACKEND_URL}/quiz/:path*`,
       },
       {
         source: '/results/:path*',
-        destination: 'http://localhost:3001/results/:path*',
+        destination: `${BACKEND_URL}/results/:path*`,
       },
     ];
   },
