@@ -59,6 +59,8 @@ export default function QuizPage() {
         text: `Xin chào ${participantName || 'bạn'}! 🌿 Mình là AI Scent Assistant. Hãy trả lời 10 câu hỏi để mình tìm ra mùi hương dành riêng cho bạn nhé!`,
       };
 
+      // This effect initializes the conversation after questions are loaded.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setMessages([welcomeMsg]);
 
       // Show first question after a delay
