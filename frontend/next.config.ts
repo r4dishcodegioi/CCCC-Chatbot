@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+const backendUrl = process.env.BACKEND_URL || 'http://localhost:3001';
+const BACKEND_URL = (
+  backendUrl.startsWith('http://') || backendUrl.startsWith('https://')
+    ? backendUrl
+    : `https://${backendUrl}`
+).replace(/\/+$/, '');
 
 const nextConfig: NextConfig = {
   async rewrites() {
