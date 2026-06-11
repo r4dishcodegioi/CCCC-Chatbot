@@ -19,7 +19,7 @@ export default function LoadingAnalysis() {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-cream via-blush/30 to-cream">
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="text-center animate-fade-in">
         {/* Tea cup animation */}
         <div className="relative mb-8">
@@ -45,7 +45,7 @@ export default function LoadingAnalysis() {
         <div className="loading-spinner mx-auto mb-6" />
 
         {/* Loading text */}
-        <p className="text-tea-brown font-display text-lg italic animate-pulse-soft">
+        <p className="text-white font-display text-lg italic animate-pulse-soft">
           {LOADING_MESSAGES[messageIndex]}
         </p>
 

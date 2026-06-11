@@ -159,12 +159,12 @@ export default function QuizPage() {
   if (!participantId) return null;
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="h-[100dvh] flex flex-col overflow-hidden">
       {/* Header */}
-      <div className="sticky top-0 z-10 bg-[#261900]/80 backdrop-blur-lg border-b border-sage/10 px-6 py-4">
+      <div className="sticky top-0 z-10 bg-[#0E1F10]/80 backdrop-blur-lg border-b border-sage/10 px-6 py-4">
         <div className="max-w-md mx-auto">
           <div className="text-center mb-3">
-            <p className="text-xs tracking-[0.2em] uppercase text-blush font-body">
+            <p className="text-md tracking-[0.2em] uppercase text-blush font-body">
               AI Scent Personality Test
             </p>
           </div>

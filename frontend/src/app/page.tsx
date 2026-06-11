@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import logo from '@/assets/logochudoc.png';
 import csglogo from '@/assets/CSG-LOGO-YELLOW@1x1.png';
+import fptlogo from '@/assets/Logo cam eng-01.png';
+import nttlogo from '@/assets/nttkc.png';
 
 export default function HomePage() {
   const router = useRouter();
@@ -23,13 +25,13 @@ export default function HomePage() {
           <Image
             src={logo}
             alt="logo"
-            width={256}
-            height={256}
+            width={200}
+            height={200}
             className="object-contain"
             priority
           />
         </div>
-        <h2 className="text-2xl md:text-3xl font-semibold uppercase tracking-[0.25em] mb-8 animate-gold-title">
+        <h2 className="text-2xl md:text-3xl font-semibold uppercase tracking-[0.2em] mb-8 animate-gold-title">
           Hương Trà Sắc Lụa
         </h2>
 
@@ -60,12 +62,29 @@ export default function HomePage() {
         </button>
 
         {/* Bottom decoration */}
-        <div className="mt-12 flex justify-center gap-3 text-sage/30">
+        <div className="mt-12 flex justify-center">
           <Image
             src={csglogo}
-            alt="logo"
-            width={128}
-            height={128}
+            alt="csglogo"
+            width={96}
+            height={96}
+            className="object-contain"
+            priority
+          />
+          <Image
+            src={nttlogo}
+            alt="nttlogo"
+            width={150}
+            height={150}
+            className="object-contain"
+            style={{ width: 'auto', height: 'auto' }}
+            priority
+          />
+          <Image
+            src={fptlogo}
+            alt="fptlogo"
+            width={80}
+            height={80}
             className="object-contain"
             priority
           />

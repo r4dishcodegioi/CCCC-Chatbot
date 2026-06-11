@@ -1,6 +1,8 @@
 'use client';
 
 import { FormulaItem } from '@/lib/types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDroplet } from '@fortawesome/free-solid-svg-icons';
 
 interface ScentFormulaProps {
   formula: FormulaItem[];
@@ -8,26 +10,18 @@ interface ScentFormulaProps {
 
 export default function ScentFormula({ formula }: ScentFormulaProps) {
   return (
-    <div className="space-y-3">
+    <div className="flex flex-col">
       {formula.map((item, index) => (
         <div
           key={item.name}
-          className="flex items-center gap-3 animate-fade-in"
+          className="flex justify-between items-center py-4 border-b border-gray-100 animate-fade-in"
           style={{ animationDelay: `${index * 0.15}s` }}
         >
-          <div className="flex gap-1">
-            {Array.from({ length: item.drops }).map((_, i) => (
-              <div
-                key={i}
-                className="w-3 h-4 rounded-full bg-gradient-to-b from-sage to-deep-green opacity-80"
-                style={{
-                  animationDelay: `${(index * 3 + i) * 0.1}s`,
-                }}
-              />
-            ))}
-          </div>
-          <span className="text-sm text-gray-700 font-medium">
-            {item.drops} giọt {item.name}
+          <span className="text-sm text-gray-600 font-body">
+            {item.drops} <FontAwesomeIcon icon={faDroplet} style={{ color: "rgb(255, 212, 59)", }} />
+          </span>
+          <span className="text-sm text-gray-800 font-body">
+            {item.name}
           </span>
         </div>
       ))}

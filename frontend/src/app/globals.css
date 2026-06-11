@@ -5,9 +5,12 @@
   --color-cream: #FDF8F0;
   --color-sage: #A8B5A2;
   --color-tea-brown: #261900;
+  --color-light-tea-brown: #735B29;
   --color-blush: #E8D5C4;
+  --color-light-yellow: #FFDEA2;
   --color-deep-green: #4A5D4A;
   --color-gold: #C4A35A;
+  --color-light-gold: #C4A35A80;
   --color-soft-white: #FEFCF9;
   --color-warm-gray: #9C9588;
 
@@ -18,6 +21,7 @@
   --animate-slide-up: slideUp 0.5s ease-out forwards;
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-soft: pulseSoft 2s ease-in-out infinite;
+  --animate-ring-ring: ringRing 1.5s ease-in-out infinite;
 
   @keyframes fadeIn {
     0% {
@@ -66,6 +70,15 @@
       opacity: 0.7;
     }
   }
+
+  @keyframes ringRing {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(-5deg); }
+    20% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    40% { transform: rotate(5deg); }
+    50%, 100% { transform: rotate(0deg); }
+  }
 }
 
 * {
@@ -74,7 +87,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #261900;
+  background-color: #0E1F10;
   min-height: 100vh;
   color: #FDF8F0;
 }
@@ -206,13 +219,13 @@ body {
 /* Premium typography animation for the event title */
 @keyframes trackingExpand {
   0% {
-    letter-spacing: -0.2em;
+    letter-spacing: 0.1em;
     filter: blur(12px);
     opacity: 0;
   }
 
   100% {
-    letter-spacing: 0.25em;
+    letter-spacing: 0.2em;
     filter: blur(0);
     opacity: 1;
   }
@@ -237,7 +250,7 @@ body {
   background: linear-gradient(120deg,
       var(--color-gold) 0%,
       #F3E5AB 25%,
-      var(--color-tea-brown) 50%,
+      var(--color-light-tea-brown) 50%,
       #F3E5AB 75%,
       var(--color-gold) 100%);
   background-size: 200% auto;
