@@ -17,7 +17,7 @@ export default function RootLayout({
       <body className="min-h-screen font-body antialiased" suppressHydrationWarning>
         <main className="relative min-h-screen overflow-hidden">
           {/* Decorative elements */}
-          <div className="fixed inset-0 overflow-hidden z-[-1]">
+          <div className="w-screen h-screen fixed inset-0 overflow-hidden z-[-1]">
             <SmokeBackground
               color="#FFDEA2"
               opacity={1}
@@ -25,6 +25,7 @@ export default function RootLayout({
               scale={1.5}
               direction="funny, forward, backward"
               mouseInteractive={true}
+              maxWidth="max-w-none"
             />
           </div>
           {children}

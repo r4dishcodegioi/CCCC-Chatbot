@@ -36,7 +36,7 @@ export default function HomePage() {
         </h2>
 
         {/* Main title */}
-        <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-cream leading-tight mb-4">
+        <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold text-cream leading-tight mb-4">
           AI Scent Personality Test
         </h1>
         <p className="font-display text-lg md:text-xl text-blush italic mb-8">

@@ -214,8 +214,8 @@ export const SmokeBackground = ({
     }, [color, speed, direction, scale, opacity, mouseInteractive, className]);
 
     return (
-        <div className={`w-full ${className}`}>
-            <div className={`mx-auto w-full ${maxWidth} h-[100vh] lg:h-[90vh] overflow-hidden relative`}>
+        <div className={`w-full h-full ${className}`}>
+            <div className={`mx-auto w-full h-full ${maxWidth} overflow-hidden relative`}>
                 <div ref={containerRef} className="absolute inset-0 w-full h-full" />
             </div>
         </div>
