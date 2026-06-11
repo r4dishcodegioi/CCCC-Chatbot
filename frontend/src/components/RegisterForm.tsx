@@ -10,7 +10,14 @@ import { useQuizStore } from '@/lib/store';
 
 const schema = z.object({
   fullName: z.string().min(1, 'Vui lòng nhập họ và tên'),
-  studentId: z.string().min(1, 'Vui lòng nhập mã số sinh viên'),
+  studentId: z
+    .string()
+    .min(1, 'Vui lòng nhập mã số')
+    .regex(
+      /^(?:(?:SE|SS|SA|QS|QE|QA|HS|HA|HE|CS|CA|CE|DS|DA|DE)\d{6}|(?!0{8})\d{8})$/i,
+      'Mã số không hợp lệ (VD: SE123456 hoặc 8 chữ số)'
+    )
+    .transform((val) => val.toUpperCase()),
   email: z.string().min(1, 'Vui lòng nhập email').email('Email không hợp lệ'),
 });
 
@@ -62,11 +69,11 @@ export default function RegisterForm() {
 
       <div>
         <label className="block text-sm font-medium text-tea-brown mb-2">
-          Mã số sinh viên
+          Mã số sinh viên / Mã số nhân viên
         </label>
         <input
           {...register('studentId')}
-          placeholder="SV001"
+          placeholder="SE123456"
           className="w-full px-4 py-3 rounded-2xl text-tea-brown bg-white/60 border border-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage transition-all text-sm placeholder:text-warm-gray/50"
         />
         {errors.studentId && (
