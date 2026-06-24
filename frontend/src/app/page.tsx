@@ -37,10 +37,10 @@ export default function HomePage() {
 
         {/* Main title */}
         <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold text-cream leading-tight mb-4">
-          AI Scent Personality Test
+          Giải mã bản sắc hương thơm cùng AI
         </h1>
         <p className="font-display text-lg md:text-xl text-blush italic mb-8">
-          Blend Your Own Signature
+          Kiến tạo dấu hương mang đậm dấu ấn riêng cùng Hương Trà Sắc Lụa
         </p>
 
         {/* Divider */}
