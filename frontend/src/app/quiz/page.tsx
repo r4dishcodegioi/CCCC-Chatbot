@@ -56,7 +56,7 @@ export default function QuizPage() {
       const welcomeMsg: ChatMessage = {
         id: 'welcome',
         type: 'ai',
-        text: `Xin chào ${participantName || 'bạn'}! 🌿 Mình là AI Scent Assistant. Hãy trả lời 10 câu hỏi để mình tìm ra mùi hương dành riêng cho bạn nhé!`,
+        text: `Xin chào ${participantName || 'bạn'}! 🌿 Mình là Trợ lý AI giải mã bản sắc hương thơm của bạn. Hãy trả lời 10 câu hỏi để mình tìm ra mùi hương dành riêng cho bạn nhé!`,
       };
 
       // This effect initializes the conversation after questions are loaded.
@@ -165,7 +165,7 @@ export default function QuizPage() {
         <div className="max-w-md mx-auto">
           <div className="text-center mb-3">
             <p className="text-md tracking-[0.2em] uppercase text-blush font-body">
-              AI Scent Personality Test
+              Giải mã bản sắc hương thơm cùng AI
             </p>
           </div>
           <ProgressBar current={Math.min(currentIndex + 1, questions.length)} total={questions.length || 10} />

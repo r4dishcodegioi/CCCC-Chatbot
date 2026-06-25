@@ -18,7 +18,7 @@ export default function ResultCard({ result, participantName }: ResultCardProps)
     <div className="result-card p-8 md:p-10 max-w-md mx-auto animate-fade-in">
       {/* Scent Identity */}
       <div className="text-center mb-8">
-        <p className="text-sage text-sm mb-2">🌿 Scent Identity</p>
+        <p className="text-sage text-sm mb-2">🌿 Dấu ấn mùi hương của bạn 🌿</p>
         <h2 className="font-display text-3xl md:text-4xl font-semibold text-deep-green mb-1">
           {result.scentIdentity}
         </h2>
