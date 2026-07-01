@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ParticipantsService } from './participants.service';
 import { CreateParticipantDto } from './dto/create-participant.dto';
 
@@ -10,4 +10,10 @@ export class ParticipantsController {
   async create(@Body() dto: CreateParticipantDto) {
     return this.participantsService.create(dto);
   }
+
+  @Get()
+  async findAll() {
+    return this.participantsService.findAll();
+  }
 }
+

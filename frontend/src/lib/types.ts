@@ -34,3 +34,23 @@ export interface Participant {
   studentId: string;
   email: string;
 }
+
+export interface ParticipantRecord {
+  id: string;
+  fullName: string;
+  studentId: string;
+  email: string;
+  createdAt?: string;
+  results?: Array<{
+    id: string;
+    scentIdentity?: string;
+    personalityDescription?: string;
+    scentDescription?: string;
+    formula?: FormulaItem[];
+    teaScores?: Record<string, number>;
+    baseScores?: Record<string, number>;
+    answers?: Array<{ questionId: number; option: string }>;
+    createdAt?: string;
+  }>;
+}
+

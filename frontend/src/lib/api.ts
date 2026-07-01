@@ -35,3 +35,12 @@ export async function submitQuiz(participantId: string, answers: { questionId: n
   }
   return res.json();
 }
+
+export async function getParticipants() {
+  const res = await fetch(`${API_BASE}/participants`, {
+    cache: 'no-store',
+  });
+  if (!res.ok) throw new Error('Failed to fetch participants');
+  return res.json();
+}
+
